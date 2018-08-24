@@ -1,0 +1,15 @@
+spring:
+  application:
+      name: config-server
+  cloud:
+    config:
+      label: master
+      discovery:
+          enabled: true
+      server:
+        git:
+          cloneOnStart: true
+          uri: https://github.com/cbq5422590/spring-cloud/
+          searchPaths: config
+server:
+  port: 8029

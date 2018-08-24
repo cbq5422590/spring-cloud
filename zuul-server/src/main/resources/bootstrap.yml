@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: zuul-server
+  cloud:
+    config:
+      fail-fast: true
+      label: master
+      uri: http://localhost:8029/

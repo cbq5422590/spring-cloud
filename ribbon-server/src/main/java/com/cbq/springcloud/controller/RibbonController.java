@@ -18,7 +18,7 @@ public class RibbonController {
     @GetMapping("")
     @HystrixCommand(fallbackMethod = "getMsgError")
     public String getMsg(@RequestParam String msg) {
-        return restTemplate.getForObject("http://MGR-SERVICE/test?msg=" + msg, String.class);
+        return restTemplate.getForObject("http://mgr-service/test?msg=" + msg, String.class);
     }
 
     public String getMsgError(String msg) {
